@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nitesh Jangir</h1>
+    <button id="stop" >stop</button>
+</body>
+<script>
+    //  setTimeout(function(){
+    //     console.log("Jangir");
+    //  }, 2000)
+
+        //OR
+
+//    const sayJangir = function(){
+//     console.log("Jangir");
+//    } 
+//    setTimeout(sayJangir, 2000)
+
+
+const changeText = function(){
+    document.querySelector('h1').innerHTML = "Best JS Series"
+}
+ const changeMe = setTimeout(changeText, 3000)
+
+//setTimeout ko rokna kese hai
+document.querySelector('#stop').addEventListener('click', (e)=>{
+ clearTimeout(changeMe)
+ console.log("STOPPED");
+})
+
+
+
+</script>
+</html>

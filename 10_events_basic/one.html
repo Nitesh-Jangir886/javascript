@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Events</title>
+</head>
+<body>
+    <div>
+        <ul id="Images">
+            <li id="japan" style="border: solid 10px ;", >"japan"</li>
+            <li id="owl" style="border: solid 10px red;">">"owl" </li>
+            <li id="prayer" style="border: solid 10px blue;">">"prayer"</li>
+            <li >  <a id="google"  href="https://www.google.com/"></a> Google</li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl Clicked")
+    // } //Achaa tarika nhi hai ye
+
+    // attachEvent // old technique so not usable now
+
+    // document.getElementById('owl').addEventListener('click', (e)=>{
+    //     console.log(e);
+    // },false)  // use this method
+
+
+//Bubbling 
+    // document.getElementById('Images').addEventListener('click', (e)=>{
+    //     console.log("clicked inside the url"); 
+    // },false)
+
+    //  document.getElementById('owl').addEventListener('click', (e)=>{
+    //     console.log("clicked Owl");
+    // },false)
+
+    //Capturing
+    //    document.getElementById('Images').addEventListener('click', (e)=>{
+    //     console.log("clicked inside the url"); 
+    // },true)
+
+    //  document.getElementById('owl').addEventListener('click', (e)=>{
+    //     console.log("clicked Owl");
+    // },true)
+
+
+    //To stop bubbling use  "e.stopPropagation()"
+//    document.getElementById('Images').addEventListener('click', (e)=>{
+//         console.log("clicked inside the url"); 
+//     },false)
+
+//      document.getElementById('owl').addEventListener('click', (e)=>{
+//         console.log("clicked Owl");
+//         e.stopPropagation();
+//     },false)
+    
+
+
+//     document.getElementById('google').addEventListener('click', (e)=>{
+//         e.preventDefault(); //ab hum google pe click krenge to website nhi khulegi
+//         e.stopPropagation()
+//         console.log("google clicked"); 
+//     })
+
+
+// Click and remove the buttons
+  document.querySelector('#Images').addEventListener('click', (e)=>{
+    // console.log(e.target.parentNode); //apne ko pura ul remove krna hai 
+    console.log(e.target); // agar per click pe ek btn delete krna ho to
+    let removeIt = e.target
+    removeIt.remove();
+  })
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM </title>
+    <style>
+     .black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head >
+<body style=" background-color: black; color: white;">
+    
+</body>
+<script>
+    //How to create a element in JS
+   const div =  document.createElement('div') // "div" ki jagah jo daloge vo crate ho jayega like--> H1, P, header, span , etc
+  console.log(div);
+  div.className = "main"
+//   div.id = "myID"
+  div.id = Math.round(Math.random() * 10 + 1) //ab random ID generate hoga hr baar
+  div.setAttribute("title", "generated title") // create class and uska naam
+  div.style.backgroundColor = "green"  
+  div.style.padding = "12px"
+//   div.innerText = "chai aur code" //ye chizzo ko overwrite krta hai so isse hume jyada use nhi krenge
+const addText = document.createTextNode("chai aur code");
+div.appendChild(addText) ;//aese isko "div" mein dalte hai
+
+document.body.appendChild(div); // this is how we attach JS file to HTML
+</script>
+</html>
